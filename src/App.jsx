@@ -3,7 +3,8 @@ import './App.css'
 import { useDispatch } from 'react-redux'
 import authService from './appwrite/auth'
 import{login,logout} from './store/authSlice'
-import {Header , Footer} from './components'
+import {Header } from './components'
+import Footer from './components/Footer/Footer'
 function App() {
 const [loading, setLoading] = useState(true)
 const dispatch = useDispatch()
@@ -25,7 +26,7 @@ authService.getCurrentUser()
   return !loading ?
   <div>
 <Header/>
-  lol
+<Footer/>
   </div> :null
 }
 
